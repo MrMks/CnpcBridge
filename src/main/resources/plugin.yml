@@ -1,0 +1,18 @@
+main: com.github.mrmks.mc.cnpcbridge.CnpcBridge
+version: ${version}
+name: CnpcBridge
+commands:
+  mcmd:
+    description: Multi-Cmd in one line
+    usage: mcmd command_1 args_1 | command_2 args_2 | command_3 args_3 | command_4 args_4
+    permission: cnpc_bridge.command.mcmd
+  tpcw:
+    description: Teleport a player from one position to another one; last parameter means set or reset player's spawnpoint; 0 means not set and not reset, 1 means set, 2 means reset;
+    usage: tpcw <player> <x> <y> <z> <rotate> <pitch> <world> [0|1|2]
+    permission: cnpc_bridge.command.tpcw
+permissions:
+  cnpc_bridge.command:
+    mcmd:
+      defailt: op
+    tpcw:
+      default: op
